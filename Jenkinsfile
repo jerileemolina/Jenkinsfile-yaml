@@ -1,7 +1,6 @@
 @Library('shared-library') _
 pipeline {
     agent any
-    yaml'release.yaml'
     stages {
         stage('APP_JAVA-INT') {
             steps {
@@ -13,7 +12,7 @@ pipeline {
                 llamada()
             }
         }
-        stage('APP_JAVA-PRE') {
+        stage('APP_JAVA-PRO') {
             steps {
                 llamada()
             }
