@@ -3,10 +3,14 @@ agent any
 stages {
     stage('primera etapa') {
     steps {
-    while read line; do 
-    echo -e "$line\n"; 
-    done < release.sh
-    
+    script {
+    while IFS=- read -r name version
+do
+    echo "$name" has made earnings of "$version" pounds today!
+done < release.sh
+
+    }
+
                 }
             }
         }
