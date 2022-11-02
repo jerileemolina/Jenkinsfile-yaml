@@ -6,7 +6,6 @@ pipeline {
         steps {
         script{ 
         def configVal = readYaml file: "release.yaml"
-
                 }
             }
         }
