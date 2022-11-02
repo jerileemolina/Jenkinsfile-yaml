@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo "Prueba"
                 sh '''
-                    file=release.yaml
+                    file=release.txt
                     while read -r line; do
                         echo "$line"
                     done < "$file"
