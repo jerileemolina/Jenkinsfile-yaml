@@ -5,7 +5,7 @@ pipeline {
         stage('Read YAML') {
         steps {
         script{ 
-        def configVal = readYaml file: "release.yml"
+        def configVal = readYaml file: "release.yaml"
 
                 }
             }
