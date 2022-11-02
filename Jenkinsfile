@@ -6,7 +6,7 @@ stages {
     while read line; do 
     echo -e "$line\n"; 
     done < release.sh
-        
+    
                 }
             }
         }
