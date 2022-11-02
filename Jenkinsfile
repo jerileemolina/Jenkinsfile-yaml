@@ -11,6 +11,7 @@ stages {
     VERSION=`echo $linea | cut -d ":" -f2 release.sh` //Extrae version
     echo "$NOMBRE es la $VERSION" //Muestra resultado
     done
+    
                 }
             }
         }
