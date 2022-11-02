@@ -4,10 +4,10 @@ stages {
     stage('primera etapa') {
     steps {
     script {
-        sh release.sh
-        while read line; do 
-        echo "$line"
-        done < release.sh
+       sh release.sh
+       for line in $(release.sh);do
+       echo "$line"
+       done
         
                 }
             }
