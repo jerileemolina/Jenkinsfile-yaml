@@ -11,9 +11,9 @@ stages {
     VERSION=`echo $LINEA | cut -d ":" -f2` //Extrae version
     echo "$NOMBRE es la $version" //Muestra resultado
     done
+
                 }
             }
         }
     }
 }
-
