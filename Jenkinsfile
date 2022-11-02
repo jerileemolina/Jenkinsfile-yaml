@@ -1,12 +1,11 @@
+data = readYaml file: "release.yaml"
 @Library('shared-library') _
 pipeline {
     agent any
     stages {
         stage('APP_JAVA-INT') {
         steps {
-        script {
-        data = readYaml file: "release.yaml"
-                }
+            echo "APP_JAVA INT... Version..es"
             }
         }
     }
