@@ -4,9 +4,12 @@ stages {
     stage('primera etapa') {
     steps {
     script {
-    while read linea nombre version;do
-    echo -e " El nombre es +$nombre y la versión es +$version"
-    done
+        sh release.sh
+        while IFS= read -r line;do
+        NOMBRE=`echo $linea | cut -d ":" -f1 release.sh`
+        VERSION=`echo $linea | cut -d ":" -f2 release.sh`
+        echo '"$NOMBRE" y la versión es "$VERSION"'
+        done < release.sh
                 }
             }
         }
