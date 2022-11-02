@@ -10,6 +10,7 @@ stages {
     VERSION=`echo $linea | cut -d ":" -f2 release.sh`
     echo "$NOMBRE es la $VERSION"
     done
+    
                 }
             }
         }
