@@ -5,7 +5,7 @@ stages {
     stage('primera etapa') {
     steps {
     script {
-        ./ release.sh
+        sh release.sh
     for LINEA in `release.sh` //LINEA guarda el resultado
     do
     NOMBRE=`echo $LINEA | cut -d ":" -f1` //Extrae nombre
