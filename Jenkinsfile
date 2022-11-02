@@ -5,7 +5,7 @@ pipeline {
         stage('APP_JAVA-INT') {
         steps {
         script {
-        data = readYaml file: "release.yml"
+        data = readYaml file: "release.yaml"
                 }
             }
         }
