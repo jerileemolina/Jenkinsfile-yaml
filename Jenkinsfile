@@ -5,11 +5,11 @@ stages {
     steps {
     script {
         sh release.sh
-    while [IFS=read -r LINEA] //LINEA guarda el resultado
+    while read -r linea; //LINEA guarda el resultado
     do
-    NOMBRE=`echo $LINEA | cut -d ":" -f1` //Extrae nombre
-    VERSION=`echo $LINEA | cut -d ":" -f2` //Extrae version
-    echo "$NOMBRE es la $version" //Muestra resultado
+    NOMBRE=`echo $linea | cut -d ":" -f1 release.sh` //Extrae nombre
+    VERSION=`echo $linea | cut -d ":" -f2 release.sh` //Extrae version
+    echo "$NOMBRE es la $VERSION" //Muestra resultado
     done
                 }
             }
