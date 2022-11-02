@@ -4,17 +4,13 @@ pipeline {
         stage('primera etapa') {
             steps {
                 echo "Prueba"
-
-                script {
-                FILE=/Documentos
-                while read LINE;do 
-                echo "Esto est tal $LINE"
-                done < $FILE
-
-
-                    }
-                }
+                sh '''
+                    file=/Documentos/release.yaml
+                    while read -r line; do
+                        echo "$line"
+                    done < "$file"
+                '''
             }
         }
     }
-
+}
