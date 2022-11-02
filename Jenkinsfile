@@ -1,16 +1,20 @@
 pipeline {
-agent any
-stages {
-    stage('primera etapa') {
-    steps {
-    script {
-    while read lineas;do
-    echo $lineas;
-    done < release.txt
+    agent any
+    stages {
+        stage('primera etapa') {
+            steps {
+                echo "Prueba"
+
+                script {
+                FILE=/Documentos
+                while read LINE;do 
+                echo "Esto est tal $LINE"
+                done < $FILE
+
+
+                    }
+                }
             }
         }
     }
-}
-
-}
 
